@@ -1,3 +1,4 @@
+package TextEditor;
 //Runs the menu and gets the character input
 import javax.swing.JOptionPane;
 
