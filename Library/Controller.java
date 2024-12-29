@@ -21,6 +21,7 @@ public class Controller {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Adding Instrument");
 		stage.show();
 	}
 	
@@ -29,6 +30,7 @@ public class Controller {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Library Inventory");
 		stage.show();
 	}
 	
@@ -37,6 +39,7 @@ public class Controller {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Available Instruments");
 		stage.show();
 	}
 	
