@@ -11,9 +11,9 @@
    <children>
       <AnchorPane prefHeight="477.0" prefWidth="358.0">
          <children>
-            <TextField layoutX="217.0" layoutY="118.0" prefHeight="26.0" prefWidth="99.0" />
-            <TextField layoutX="217.0" layoutY="182.0" prefHeight="26.0" prefWidth="99.0" />
-            <TextField layoutX="217.0" layoutY="245.0" prefHeight="26.0" prefWidth="99.0" />
+            <TextField fx:id="userinput1" layoutX="217.0" layoutY="118.0" prefHeight="26.0" prefWidth="99.0" />
+            <TextField fx:id="userinput2" layoutX="217.0" layoutY="182.0" prefHeight="26.0" prefWidth="99.0" />
+            <TextField fx:id="userinput3" layoutX="217.0" layoutY="245.0" prefHeight="26.0" prefWidth="99.0" />
             <Label layoutX="17.0" layoutY="72.0" prefHeight="27.0" prefWidth="275.0" text="Enter the details of the instrument">
                <font>
                   <Font size="18.0" />
@@ -39,14 +39,19 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="44.0" layoutY="298.0" text="Is the instrument checked out?">
+            <Label layoutX="46.0" layoutY="297.0" text="Is the instrument ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <CheckBox layoutX="44.0" layoutY="332.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" text="CheckBox" />
-            <Button layoutX="201.0" layoutY="383.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="114.0" text="Enter" />
+            <Button layoutX="191.0" layoutY="383.0" mnemonicParsing="false" onAction="#saveInstrument" prefHeight="58.0" prefWidth="114.0" text="Enter" />
             <Button layoutX="40.0" layoutY="383.0" mnemonicParsing="false" onAction="#goBack" prefHeight="58.0" prefWidth="114.0" text="Go Back" />
+            <Label layoutX="46.0" layoutY="324.0" prefHeight="27.0" prefWidth="139.0" text="checked out?">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="myCheckBox" layoutX="209.0" layoutY="315.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="139.0" text="Check if checked out" />
          </children>
       </AnchorPane>
    </children>
