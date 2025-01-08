@@ -6,12 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner; 
+import java.util.ArrayList;
 
 public class Controller {
 
@@ -29,6 +32,13 @@ public class Controller {
 	private TextField userinput3;
 	@FXML
 	private CheckBox myCheckBox;
+	@FXML
+	private TableColumn txtClm1;
+	
+	//public ArrayList<String> brand = new ArrayList<String>();
+	public ArrayList<String> instruments = new ArrayList<String>();
+	//public ArrayList<String> serialNumber = new ArrayList<String>();
+	//public ArrayList<String> checkOut = new ArrayList<String>();
 	public void addToLib(ActionEvent event) throws IOException{
 		Parent root = FXMLLoader.load(getClass().getResource("AddToLib.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -77,5 +87,19 @@ public class Controller {
 		fileWriter.flush();
 		fileWriter.close();
 	}
+	
+	public void showInstruments(ActionEvent event) throws IOException{
+		
+		File myObj = new File("Library.txt");
+		Scanner myReader = new Scanner(myObj);
+		while (myReader.hasNextLine()) {
+			String data = myReader.nextLine();
+		    instruments.add(data);
+		}
+		myReader.close();
+		System.out.println(instruments);
+		
+	}
+	
 	
 }
