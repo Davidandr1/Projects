@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-
+<AnchorPane prefHeight="477.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <AnchorPane prefHeight="477.0" prefWidth="358.0">
+         <children>
+            <TextField fx:id="userinput1" layoutX="217.0" layoutY="118.0" prefHeight="26.0" prefWidth="99.0" />
+            <TextField fx:id="userinput2" layoutX="217.0" layoutY="182.0" prefHeight="26.0" prefWidth="99.0" />
+            <TextField fx:id="userinput3" layoutX="217.0" layoutY="245.0" prefHeight="26.0" prefWidth="99.0" />
+            <Label layoutX="17.0" layoutY="72.0" prefHeight="27.0" prefWidth="275.0" text="Enter the details of the instrument">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="14.0" text="Adding to library">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="118.0" prefHeight="26.0" prefWidth="50.0" text="Brand">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="181.0" text="Type of Instrument">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="244.0" text="Serial Number">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="297.0" text="Is the instrument ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="191.0" layoutY="383.0" mnemonicParsing="false" onAction="#saveInstrument" prefHeight="58.0" prefWidth="114.0" text="Enter" />
+            <Button layoutX="40.0" layoutY="383.0" mnemonicParsing="false" onAction="#goBack" prefHeight="58.0" prefWidth="114.0" text="Go Back" />
+            <Label layoutX="46.0" layoutY="324.0" prefHeight="27.0" prefWidth="139.0" text="checked out?">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="myCheckBox" layoutX="209.0" layoutY="315.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="139.0" text="Check if checked out" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
