@@ -40,6 +40,13 @@ public class Controller {
 	public ArrayList<String> instruments = new ArrayList<String>();
 	//public ArrayList<String> serialNumber = new ArrayList<String>();
 	//public ArrayList<String> checkOut = new ArrayList<String>();
+
+	/**
+     * Opens the AddToLib.fxml view.
+     *
+     * @param event The action event triggering this method.
+     * @throws IOException If the FXML file is not found.
+     */
 	public void addToLib(ActionEvent event) throws IOException{
 		Parent root = FXMLLoader.load(getClass().getResource("AddToLib.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -49,6 +56,12 @@ public class Controller {
 		stage.show();
 	}
 	
+	/**
+     * Opens the Inventory.fxml view to see the complete library.
+     *
+     * @param event The action event triggering this method.
+     * @throws IOException If the FXML file is not found.
+     */
 	public void seeLib(ActionEvent event) throws IOException{
 		Parent root = FXMLLoader.load(getClass().getResource("Inventory.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -58,6 +71,12 @@ public class Controller {
 		stage.show();
 	}
 	
+	 /**
+     * Opens the AvailableInventory.fxml view to see available instruments.
+     *
+     * @param event The action event triggering this method.
+     * @throws IOException If the FXML file is not found.
+     */
 	public void seeAvailableLib(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("AvailableInventory.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -67,6 +86,12 @@ public class Controller {
 		stage.show();
 	}
 	
+	/**
+     * Returns to the main application screen.
+     *
+     * @param event The action event triggering this method.
+     * @throws IOException If the FXML file is not found.
+     */
 	public void goBack(ActionEvent event) throws IOException{
 		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -75,6 +100,13 @@ public class Controller {
 		stage.show();
 	}
 	
+	/**
+     * Saves an instrument's details to a file.
+     * Ensures that all input fields are filled before writing to the file.
+     *
+     * @param event The action event triggering this method.
+     * @throws IOException If an error occurs during file writing.
+     */
 	public void saveInstrument(ActionEvent event) throws IOException{
 		String file = "Library.txt";
 		String checkBox;
@@ -94,6 +126,13 @@ public class Controller {
 		}
 	}
 	
+	 /**
+     * Reads and displays instruments from the file.
+     * The data is stored in a list and printed to the console.
+     *
+     * @param event The action event triggering this method.
+     * @throws IOException If an error occurs while reading the file.
+     */
 	public void showInstruments(ActionEvent event) throws IOException{
 		
 		File myObj = new File("Library.txt");
@@ -107,6 +146,11 @@ public class Controller {
 		
 	}
 
+	/**
+     * Displays an error message if any input field is left blank.
+     *
+     * @param event The action event triggering this method.
+     */
 	public void ErrorMessage(ActionEvent event) {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
 		alert.setTitle("Error Message");
@@ -115,6 +159,9 @@ public class Controller {
 		alert.showAndWait();
 	}
 	
+	/**
+     * Clears all input fields in the form.
+     */
 	public void clearFields() {
 		userinput1.setText(null);
 		userinput2.setText(null);

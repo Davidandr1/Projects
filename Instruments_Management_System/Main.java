@@ -8,12 +8,30 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 
+
+/**
+ * The Main class serves as the entry point for the JavaFX application.
+ * It initializes and launches the GUI.
+ */
 public class Main extends Application {
 
+	/**
+     * The main method that starts the application.
+     * Calls the `launch` method to initiate JavaFX.
+     *
+     * @param args Command-line arguments passed to the application.
+     */
 	public static void main(String[] args) {
 		launch(args);
 	}	
 	
+	/**
+     * Initializes and displays the main application window.
+     * Loads the `Main.fxml` file, applies a stylesheet, sets an application icon,
+     * and sets the title of the window.
+     *
+     * @param stage The primary stage for the application.
+     */
 	@Override
 	public void start(Stage stage){
 		
