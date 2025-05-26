@@ -1,1 +1,14 @@
+Goals:
+Extract data from a public weather API
+Load the data into a Postgres database
+Transform it into analytical tables using dbt
+Schedule everything with Apache Airflow
+Visualizes insights in a dashboard tool
 
+Using:
+requests or aiohttp	for Data ingestion (API handling)
+PostgreSQL for Database fundamentals
+dbt	for SQL-based data transformation + modeling
+Apache for Airflow	Workflow orchestration + automation
+Docker for Local development + reproducibility
+Looker Studio or Metabase	for Dashboarding
